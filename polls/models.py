@@ -27,17 +27,14 @@ class Question(models.Model):
 class Choice(models.Model):
     question = models.ForeignKey(Question)
     choice_text = models.CharField(max_length=200)
-    #votes = models.IntegerField(default=0)
+    votes = models.IntegerField(default=0)
     def __unicode__(self):              # __unicode__ on Python 2
         return self.choice_text
 
 class Answer(models.Model):
-    question = question = models.ForeignKey(Question)
+    question = models.ForeignKey(Question)
     choice = models.ForeignKey(Choice)
     pub_date = models.DateTimeField('date published')
-
-    def __unicode__(self):              # __unicode__ on Python 2
-        return self.question + self.choice
 
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)

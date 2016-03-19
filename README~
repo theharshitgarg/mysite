@@ -1,0 +1,17 @@
+This is a solution to the Automatic Evaluaiton to the exam question.
+
+For using,
+
+
+please go to mysite folder80
+type python manage.py runserver
+type localhost:8080/polls
+navigate the web site as usual
+for admin login,
+type localhost:8080/admin
+username  : admin@vjigsaw.com
+password  : 1234asdf
+
+for help harshitgargmnit@gmail.com
+
+
